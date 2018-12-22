@@ -11,8 +11,8 @@ import json
 
 
 # モデルの読み込み 関数の前に置いておくこと　毎回読み込むと結構処理量が多い
-loaded_model = joblib.load('demo_app/demo_model.pkl')
-#loaded_model = joblib.load('/home/sykikagaku/sykikagaku.pythonanywhere.com/demo_app/demo_model.pkl')
+#loaded_model = joblib.load('demo_app/demo_model.pkl')
+loaded_model = joblib.load('/home/sykikagaku/sykikagaku.pythonanywhere.com/demo_app/demo_model.pkl')
 
 @login_required # 追加
 def index(request):
