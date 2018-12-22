@@ -24,7 +24,7 @@ SECRET_KEY = '3hgkvr$rr*01-@20ga%l&th7ki(%j^=z2$b#+#8it&se@+bdt0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+# デプロイしWEｂ上で確認できるように設定
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
 
@@ -104,9 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'ja'
+LANGUAGE_CODE = 'ja' # 変更点１記入漏れの警告等を日本語で提示してくれる
 
-TIME_ZONE = 'Asia/Tokyo'
+TIME_ZONE = 'Asia/Tokyo' # 変更点２　データの入力された日時などに反映されるため、こうしておいたほうがいい
 
 USE_I18N = True
 
@@ -117,6 +117,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+# 変更点３　Staticファイルのパス
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
