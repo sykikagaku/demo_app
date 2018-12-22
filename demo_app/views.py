@@ -11,8 +11,8 @@ import json
 
 
 # モデルの読み込み 関数の前に置いておくこと　毎回読み込むと結構処理量が多い
-#loaded_model = joblib.load('demo_app/demo_model.pkl')
-loaded_model = joblib.load('/home/sykikagaku/sykikagaku.pythonanywhere.com/demo_app/demo_model.pkl')
+loaded_model = joblib.load('demo_app/demo_model.pkl')
+#loaded_model = joblib.load('/home/sykikagaku/sykikagaku.pythonanywhere.com/demo_app/demo_model.pkl')
 
 @login_required # 追加
 def index(request):
@@ -86,7 +86,7 @@ def signup(request):
 def info(request):
     return render(request,'demo_app/info.html',{})
 
-
+@login_required # 追加
 def info(request):
     # DBからデータの読み込み
     customers = Customers.objects.values_list(\
@@ -118,9 +118,3 @@ def info(request):
     val, index = json.dumps(dic_val), json.dumps(dic_index)
 
     return render(request, 'demo_app/info.html', {'index':index, 'val':val})
-
-@login_required # 追加
-def info(request):
-    customers = Customers.objects.values_list(\
-,
-,
