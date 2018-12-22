@@ -2,6 +2,27 @@
 
 {% block content %}
 
-    <h1>Hello Django</h1>
+<div class="row">
+  <div class="col s2">
+  </div>
+  <div class="col s8" style="text-align: center;">
+    <h5>顧客をリストに新規登録するか、過去の顧客を確認するか選んでください</h5>
+  </div>
+  <div class="col s2">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s2">
+  </div>
+  <div class="col s8" style="text-align: center;">
+    <a href="/input_form"><button type="button" name="input" style="padding: 10px 20px; margin-right: 30px;">新規顧客をリストに追加する。</button></a>
+    <a href="/history"><button type="button" name="history" style="padding: 10px 20px">顧客リストを確認する。</button></a>
+    <a href="/info"><button type="button" class="btn btn-default" name="history" style="margin-left:20px">顧客デモグラフィックを確認する。</button></a>
+  </div>
+  <div class="col s2">
+  </div>
+</div>
+
 
 {% endblock %}

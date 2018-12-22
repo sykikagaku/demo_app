@@ -120,3 +120,4 @@ USE_TZ = True
 # 変更点３　Staticファイルのパス
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+LOGIN_REDIRECT_URL = '/'
