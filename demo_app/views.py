@@ -118,3 +118,9 @@ def info(request):
     val, index = json.dumps(dic_val), json.dumps(dic_index)
 
     return render(request, 'demo_app/info.html', {'index':index, 'val':val})
+
+@login_required # 追加
+def info(request):
+    customers = Customers.objects.values_list(\
+,
+,
